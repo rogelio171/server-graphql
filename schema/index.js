@@ -11,6 +11,16 @@ const rootQuery = gql`
         course(id: Int) : Course
         professor(id:Int): Professor
     }
+
+    type Mutation {
+        professorAdd(professor: NewProfessor): Professor
+        professorEdit(professorId: Int!, professor: ProfessorEditable): Professor
+        professorDelete(professorId: Int!) : Professor
+
+        courseAdd(course: NewCourse): Course
+        courseEdit(courseId: Int!, course: CourseEditable):Course
+        courseDelete(courseId: Int!) : Course
+    }
 `
 
 const server = new ApolloServer({

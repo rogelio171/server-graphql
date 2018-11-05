@@ -12,4 +12,16 @@ module.exports = gql`
         MASCULINE
         FEMENINE
     }
+
+    input NewProfessor {
+        name: String!
+        nationality: String!
+        gender: Gender
+    }
+
+    input ProfessorEditable {
+        name: String
+        nationality: String
+        gender: Gender
+    }
 `

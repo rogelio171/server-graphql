@@ -17,4 +17,14 @@ module.exports = gql`
         name: String!
         body: String!
     }
+
+    input NewCourse {
+        title: String!
+        description: String!
+    }
+
+    input CourseEditable {
+        title: String!
+        description: String!
+    }
 `
